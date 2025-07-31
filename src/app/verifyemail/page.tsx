@@ -1,9 +1,8 @@
 "use client"
 
 import axios from "axios"
-import { set } from "mongoose"
 import Link from "next/link"
-import Reat, { use, useEffect, useState } from "react"
+import React, { useEffect, useState } from "react"
 
 
 export default function VerifyEmailPage() {

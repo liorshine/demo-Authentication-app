@@ -1,6 +1,4 @@
-import { verify } from "crypto";
-import mongoose, { mongo } from "mongoose"
-import { type } from "os";
+import mongoose from "mongoose"
 
 const userSchema = new mongoose.Schema({
     username: {
