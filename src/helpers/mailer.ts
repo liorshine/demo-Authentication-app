@@ -14,24 +14,24 @@ export const sendEmail = async({email, emailType, userId}: any) => {
             {forgotPasswordToken: hashedToken,  forgotPasswordTokenExpiry: Date.now() + 3600000})
         }
         
-        // var transport = nodemailer.createTransport({
-        //     host: process.env.EMAIL_HOST,
-        //     port: Number(process.env.EMAIL_PORT),
-        //     auth: {
-        //         user: process.env.EMAIL_USER,
-        //         pass: process.env.EMAIL_PASSWORD
-        //     }
-        //  });
+        var transport = nodemailer.createTransport({
+            host: process.env.EMAIL_HOST,
+            port: Number(process.env.EMAIL_PORT),
+            auth: {
+                user: process.env.EMAIL_USER,
+                pass: process.env.EMAIL_PASSWORD
+            }
+         });
 
         // Looking to send emails in production? Check out our Email API/SMTP product!
-        const transport = nodemailer.createTransport({
-        host: "sandbox.smtp.mailtrap.io",
-        port: 2525,
-        auth: {
-            user: "dd4abeb927ad44",
-            pass: "24872db1d0f5ff"
-        }
-        });
+        // const transport = nodemailer.createTransport({
+        // host: "sandbox.smtp.mailtrap.io",
+        // port: 2525,
+        // auth: {
+        //     user: "dd4abeb927ad44",
+        //     pass: "24872db1d0f5ff"
+        // }
+        // });
 
          const mailOptions = {
             from: process.env.EMAIL_FROM,
